@@ -3,13 +3,8 @@ extends Camera
 export var lerp_speed = 3.0
 export (NodePath) var target_path = null
 export (Vector3) var offset = Vector3.ZERO
-export (Vector3) var direction = Vector3.ZERO
 
 var target = null
-
-var yaw_input = 0
-export var input_response = 8.0
-export var yaw_speed = 1.25 
 
 func _ready():
 	if target_path:
