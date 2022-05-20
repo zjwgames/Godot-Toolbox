@@ -1,0 +1,39 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://suvLuxury.glb" type="PackedScene" id=1]
+[ext_resource path="res://ArcadeCar.gd" type="Script" id=2]
+[ext_resource path="res://Camera.tscn" type="PackedScene" id=3]
+
+[sub_resource type="SphereShape" id=2]
+
+[sub_resource type="SphereMesh" id=3]
+
+[node name="ArcadeCar" type="Spatial"]
+script = ExtResource( 2 )
+
+[node name="Ball" type="RigidBody" parent="."]
+input_ray_pickable = false
+gravity_scale = 10.0
+can_sleep = false
+linear_damp = 1.0
+angular_damp = 5.0
+
+[node name="CollisionShape" type="CollisionShape" parent="Ball"]
+shape = SubResource( 2 )
+
+[node name="MeshInstance" type="MeshInstance" parent="Ball"]
+mesh = SubResource( 3 )
+material/0 = null
+
+[node name="CarMesh" type="MeshInstance" parent="."]
+
+[node name="suvLuxury" parent="CarMesh" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0 )
+
+[node name="RayCast" type="RayCast" parent="CarMesh"]
+enabled = true
+
+[node name="Camera" parent="." instance=ExtResource( 3 )]
+lerp_speed = 8.0
+target_path = NodePath("../CarMesh")
+offset = Vector3( 0, 2, 10 )
