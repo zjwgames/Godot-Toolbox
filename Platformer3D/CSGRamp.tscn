@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://CSGTanMaterial.tres" type="Material" id=1]
+
+[node name="CSGRamp" type="CSGCombiner"]
+material_override = ExtResource( 1 )
+use_collision = true
+
+[node name="CSGPolygon" type="CSGPolygon" parent="."]
+polygon = PoolVector2Array( 0, 0, 0, 1, 2, 0 )
