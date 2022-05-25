@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://CSGTanMaterial.tres" type="Material" id=1]
+
+[node name="CSGPlatform" type="CSGCombiner"]
+material_override = ExtResource( 1 )
+use_collision = true
+
+[node name="CSGBox" type="CSGBox" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -8, -0.75, -9.5 )
+width = 4.0
+height = 0.5
+depth = 39.0
