@@ -11,7 +11,7 @@ dest_files=[ "res://.import/blockQuarter.glb-3f539e532698209a612c6c471c14050c.sc
 
 [params]
 
-nodes/root_type="Spatial"
+nodes/root_type="StaticBody"
 nodes/root_name="Scene Root"
 nodes/root_scale=1.0
 nodes/custom_script=""

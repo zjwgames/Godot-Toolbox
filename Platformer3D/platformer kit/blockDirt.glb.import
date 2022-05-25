@@ -11,7 +11,7 @@ dest_files=[ "res://.import/blockDirt.glb-ce0a5eca03644726b4ffee6b0661fdc1.scn" 
 
 [params]
 
-nodes/root_type="Spatial"
+nodes/root_type="StaticBody"
 nodes/root_name="Scene Root"
 nodes/root_scale=1.0
 nodes/custom_script=""
